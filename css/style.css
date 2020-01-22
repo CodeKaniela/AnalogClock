@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(218, 218, 218);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 200px;
+}
+
+.horloge {
+    width: 400px;
+    height: 400px;
+    background-color: rgb(233, 233, 233);
+    border-radius: 50%;
+    border: 3px solid #FCFCFC;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07),
+        0 2px 4px rgba(0, 0, 0, 0.07),
+        0 4px 8px rgba(0, 0, 0, 0.07),
+        0 8px 16px rgba(0, 0, 0, 0.07),
+        0 16px 32px rgba(0, 0, 0, 0.07),
+        0 32px 64px rgba(0, 0, 0, 0.07),
+
+        inset 0 1px 3px rgba(0, 0, 0, 0.07),
+        inset 0 2px 6px rgba(0, 0, 0, 0.07),
+        inset 0 4px 12px rgba(0, 0, 0, 0.07),
+        inset 0 8px 24px rgba(0, 0, 0, 0.07),
+        inset 0 16px 48px rgba(0, 0, 0, 0.07),
+        inset 0 32px 96px rgba(0, 0, 0, 0.07),
+
+        0 -15.6px 10.5px rgba(255, 255, 255, 0.397),
+        0 -22.4px 25.3px rgba(255, 255, 255, 0.473),
+        0 -23.8px 47.7px rgba(255, 255, 255, 0.514),
+        0 -19.5px 85.1px rgba(255, 255, 255, 0.582),
+        0 -5.9px 159.2px rgba(255, 255, 255, 0.699),
+        0 58px 381px rgba(255, 255, 255, 0.788);
+
+    position: relative;
+}
+
+.horloge .number {
+    color: rgb(88, 88, 88);
+    font-size: large;
+    font-weight: bolder;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform: rotate(var(--rotation));
+}
+
+.horloge .number1 {
+    --rotation: 30deg;
+}
+
+.horloge .number2 {
+    --rotation: 60deg;
+}
+
+.horloge .number3 {
+    --rotation: 90deg;
+}
+
+.horloge .number4 {
+    --rotation: 120deg;
+}
+
+.horloge .number5 {
+    --rotation: 150deg;
+}
+
+.horloge .number6 {
+    --rotation: 180deg;
+}
+
+.horloge .number7 {
+    --rotation: 210deg;
+}
+
+.horloge .number8 {
+    --rotation: 240deg;
+}
+
+.horloge .number9 {
+    --rotation: 270deg;
+}
+
+.horloge .number10 {
+    --rotation: 300deg;
+}
+
+.horloge .number11 {
+    --rotation: 330deg;
+}
+
+.horloge .hand {
+    --rotation: 0;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: bottom;
+    z-index: 9;
+    transform: translateX(-50%) rotate(calc(var(--rotation)* 1deg));
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07),
+        0 2px 4px rgba(0, 0, 0, 0.07),
+        0 4px 8px rgba(0, 0, 0, 0.07);
+    border-bottom-left-radius: 40%;
+    border-bottom-right-radius: 40%;
+    border-top-left-radius: 30%;
+    border-top-right-radius: 30%;
+}
+
+/* .centerpoint {
+    position: absolute;
+    background-color: black;
+    z-index: 10;
+    width: 10px;
+    height: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 30%;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.397);
+
+} */
+
+.horloge .hand.seconds {
+    width: 3px;
+    height: 47%;
+    background-color: rgb(104, 104, 104);
+}
+
+.horloge .hand.minutes {
+    width: 6px;
+    height: 45%;
+    background-color: rgb(58, 58, 58);
+}
+
+.horloge .hand.hour {
+    width: 8px;
+    height: 35%;
+    background-color: rgb(58, 58, 58);
+}
+
+.btn button {
+    border: none;
+    padding: 5px;
+    border-radius: 30%;
+}
